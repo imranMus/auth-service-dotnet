@@ -90,7 +90,7 @@ namespace MarketplaceApi.Controllers
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
-            Console.WriteLine("JWT KEY: " + _configuration["Jwt:Key"]);
+            //Console.WriteLine("JWT KEY: " + _configuration["Jwt:Key"]);
             var key = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!)
             );
